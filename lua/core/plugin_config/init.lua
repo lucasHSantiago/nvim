@@ -9,4 +9,4 @@ require("core.plugin_config.none-ls")
 require("core.plugin_config.completions")
 require("core.plugin_config.terminal")
 require("core.plugin_config.tabs")
-
+require("core.plugin_config.debug")

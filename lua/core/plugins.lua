@@ -28,4 +28,8 @@ require("lazy").setup({
 
 	"akinsho/toggleterm.nvim",
     "akinsho/bufferline.nvim",
+
+    "mfussenegger/nvim-dap",
+    "nvim-neotest/nvim-nio",
+    "rcarriga/nvim-dap-ui",
 })

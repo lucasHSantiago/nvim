@@ -40,7 +40,7 @@ end
 
 dap.adapters.coreclr = {
   type = 'executable',
-  command = "C:/netcoredbg/netcoredbg.exe",
+  command = 'netcoredbg',
   args = {'--interpreter=vscode'}
 }
 
@@ -93,3 +93,4 @@ local config = {
 }
 
 dap.configurations.cs = config
+

@@ -27,9 +27,15 @@ require("lazy").setup({
 	"kevinhwang91/nvim-hlslens",
 
 	"akinsho/toggleterm.nvim",
-    "akinsho/bufferline.nvim",
+	"akinsho/bufferline.nvim",
 
-    "mfussenegger/nvim-dap",
-    "nvim-neotest/nvim-nio",
-    "rcarriga/nvim-dap-ui",
+	"mfussenegger/nvim-dap",
+	"nvim-neotest/nvim-nio",
+	"rcarriga/nvim-dap-ui",
+
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 })

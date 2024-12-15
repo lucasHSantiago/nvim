@@ -4,18 +4,22 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
+	sort = {
+		sorter = "case_sensitive",
+	},
+	view = {
+		width = 30,
+		float = {
+            enable = true,
+			quit_on_focus_loss = true,
+		},
+	},
+	renderer = {
+		group_empty = true,
+	},
+	filters = {
+		dotfiles = true,
+	},
 })
 
-vim.keymap.set('n', '<c-n>', ':NvimTreeFocus<CR>')
+vim.keymap.set("n", "<c-n>", ":NvimTreeFocus<CR>")

@@ -51,4 +51,6 @@ require("lazy").setup({
 			"echasnovski/mini.pick", -- optional
 		},
 	},
+
+    "jiangmiao/auto-pairs",
 })

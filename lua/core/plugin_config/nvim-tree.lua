@@ -17,9 +17,6 @@ require("nvim-tree").setup({
 	renderer = {
 		group_empty = true,
 	},
-	filters = {
-		dotfiles = true,
-	},
 })
 
 vim.keymap.set("n", "<c-n>", ":NvimTreeFocus<CR>")

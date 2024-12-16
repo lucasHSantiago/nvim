@@ -16,6 +16,7 @@ lspconfig.clangd.setup({})
 lspconfig.csharp_ls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.omnisharp.setup({})
+lspconfig.yamlls.setup({})
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

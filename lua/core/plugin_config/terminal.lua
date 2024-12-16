@@ -8,16 +8,8 @@ require("toggleterm").setup{
     start_in_insert = true,
     insert_mappings = true,
     persist_size = true,
-    direction = "float",
+    direction = "tab",
     close_on_exit = true,
     shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
-    float_opts = {
-        border = "curved",
-        winblend = 0,
-        highlights = {
-            border = "Normal",
-            background = "Normal",
-        },
-    },
 }
 

@@ -7,7 +7,7 @@ lspconfig_defaults.capabilities =
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "clangd", "csharp_ls", "gopls" },
+	ensure_installed = { "lua_ls", "clangd", "omnisharp", "gopls", "dockerls", "yamlls" },
 })
 
 local lspconfig = require("lspconfig")
@@ -20,9 +20,9 @@ lspconfig.lua_ls.setup({
 
 lspconfig.lua_ls.setup({})
 lspconfig.clangd.setup({})
--- lspconfig.csharp_ls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.yamlls.setup({})
+lspconfig.dockerls.setup({})
 
 lspconfig.omnisharp.setup({
 	capabilities = capabilities,

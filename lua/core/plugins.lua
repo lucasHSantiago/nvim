@@ -53,4 +53,6 @@ require("lazy").setup({
 	},
 
 	"jiangmiao/auto-pairs",
+
+    "OmniSharp/omnisharp-vim",
 })

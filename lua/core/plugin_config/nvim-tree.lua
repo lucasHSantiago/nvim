@@ -14,9 +14,6 @@ require("nvim-tree").setup({
 			quit_on_focus_loss = true,
 		},
 	},
-	renderer = {
-		group_empty = true,
-	},
 })
 
 vim.keymap.set("n", "<c-n>", ":NvimTreeFocus<CR>")

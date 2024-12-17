@@ -2,7 +2,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/nvim-cmp",
 
-	-- "ellisonleao/gruvbox.nvim",
+	"ellisonleao/gruvbox.nvim",
     "folke/tokyonight.nvim",
 
 	"nvim-lualine/lualine.nvim",

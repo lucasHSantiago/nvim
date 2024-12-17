@@ -18,10 +18,48 @@ lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.lua_ls.setup({})
-lspconfig.clangd.setup({})
-lspconfig.gopls.setup({})
+lspconfig.lua_ls.setup({
+	settings = {
+		Lua = {
+			hint = {
+				enable = true,
+			},
+		},
+	},
+})
+
+lspconfig.clangd.setup({
+	settings = {
+		clangd = {
+			InlayHints = {
+				Designators = true,
+				Enabled = true,
+				ParameterNames = true,
+				DeducedTypes = true,
+			},
+			fallbackFlags = { "-std=c++20" },
+		},
+	},
+})
+
+lspconfig.gopls.setup({
+	settings = {
+		gopls = {
+			hints = {
+				rangeVariableTypes = false,
+				parameterNames = true,
+				constantValues = true,
+				assignVariableTypes = false,
+				compositeLiteralFields = true,
+				compositeLiteralTypes = true,
+				functionTypeParameters = true,
+			},
+		},
+	},
+})
+
 lspconfig.yamlls.setup({})
+
 lspconfig.dockerls.setup({})
 
 lspconfig.omnisharp.setup({
@@ -31,7 +69,27 @@ lspconfig.omnisharp.setup({
 	organize_imports_on_format = true,
 	enable_decompilation_support = true,
 	filetypes = { "cs", "vb", "csproj", "sln", "slnx", "props", "csx", "targets" },
+	settings = {
+		RoslynExtensionsOptions = {
+			InlayHintsOptions = {
+				EnableForParameters = true,
+				ForLiteralParameters = true,
+				ForIndexerParameters = true,
+				ForObjectCreationParameters = true,
+				ForOtherParameters = true,
+				SuppressForParametersThatDifferOnlyBySuffix = false,
+				SuppressForParametersThatMatchMethodIntent = false,
+				SuppressForParametersThatMatchArgumentName = false,
+				EnableForTypes = true,
+				ForImplicitVariableTypes = true,
+				ForLambdaParameterTypes = true,
+				ForImplicitObjectCreatio = true,
+			},
+		},
+	},
 })
+
+require("inlay-hints").setup()
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

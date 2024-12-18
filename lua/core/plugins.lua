@@ -4,6 +4,8 @@ require("lazy").setup({
 
 	"ellisonleao/gruvbox.nvim",
     "folke/tokyonight.nvim",
+    "rose-pine/neovim",
+    "scottmckendry/cyberdream.nvim",
 
 	"nvim-lualine/lualine.nvim",
 

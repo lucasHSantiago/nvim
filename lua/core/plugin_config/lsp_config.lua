@@ -18,15 +18,7 @@ lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.lua_ls.setup({
-	settings = {
-		Lua = {
-			hint = {
-				enable = true,
-			},
-		},
-	},
-})
+lspconfig.lua_ls.setup({})
 
 lspconfig.clangd.setup({
 	settings = {
@@ -96,4 +88,5 @@ vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename, {})
+vim.keymap.set("n", "<leader>ro", vim.lsp.buf.hover, {})
 

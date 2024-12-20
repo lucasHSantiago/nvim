@@ -18,5 +18,8 @@
 -- vim.cmd("colorscheme cyberdream")
 
 -- Tokyo Dark
-require("tokyodark").setup({}) 
-vim.cmd([[colorscheme tokyodark]])
+-- require("tokyodark").setup({}) 
+-- vim.cmd([[colorscheme tokyodark]])
+
+-- Catppuccin
+vim.cmd.colorscheme "catppuccin-mocha"

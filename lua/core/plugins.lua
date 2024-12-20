@@ -7,6 +7,7 @@ require("lazy").setup({
     "rose-pine/neovim",
     "scottmckendry/cyberdream.nvim",
     "tiagovla/tokyodark.nvim",
+    "catppuccin/nvim",
 
 	"nvim-lualine/lualine.nvim",
 

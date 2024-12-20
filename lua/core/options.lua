@@ -1,3 +1,5 @@
+vim.opt.guicursor = "a:block"
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 

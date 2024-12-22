@@ -1,3 +1,8 @@
+local actions = require("telescope.actions")
+local open_with_trouble = require("trouble.sources.telescope").open
+
+local add_to_trouble = require("trouble.sources.telescope").add
+
 require("telescope").setup({
 	file_ignore_patterns = {
 		"node%_modules/.*",
@@ -5,6 +10,12 @@ require("telescope").setup({
 	pickers = {
 		find_files = {
 			hidden = true,
+		},
+	},
+	defaults = {
+		mappings = {
+			i = { ["<c-t>"] = open_with_trouble },
+			n = { ["<c-t>"] = open_with_trouble },
 		},
 	},
 })
@@ -16,6 +27,5 @@ vim.keymap.set("n", "<Space><Space>", builtin.oldfiles, {})
 vim.keymap.set("n", "<Space>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<Space>fh", builtin.help_tags, {})
-vim.keymap.set("n", "<Space>fd", builtin.diagnostics, {})
 
 require("telescope").load_extension("ui-select")

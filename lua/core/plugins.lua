@@ -8,6 +8,7 @@ require("lazy").setup({
 	"scottmckendry/cyberdream.nvim",
 	"tiagovla/tokyodark.nvim",
 	"catppuccin/nvim",
+    "nvim-tree/nvim-web-devicons",
 
 	"nvim-lualine/lualine.nvim",
 
@@ -31,6 +32,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	"nvim-telescope/telescope-ui-select.nvim",
+    "folke/trouble.nvim",
 
 	"nvimtools/none-ls.nvim",
 

@@ -34,21 +34,7 @@ lspconfig.clangd.setup({
 	},
 })
 
-lspconfig.gopls.setup({
-	settings = {
-		gopls = {
-			hints = {
-				rangeVariableTypes = false,
-				parameterNames = true,
-				constantValues = true,
-				assignVariableTypes = false,
-				compositeLiteralFields = true,
-				compositeLiteralTypes = true,
-				functionTypeParameters = true,
-			},
-		},
-	},
-})
+lspconfig.gopls.setup({})
 
 lspconfig.yamlls.setup({})
 

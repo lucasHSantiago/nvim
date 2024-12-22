@@ -7,12 +7,13 @@
 
 --Tokyo Night
 -- vim.cmd[[colorscheme tokyonight]]
---
--- require("rose-pine").setup({
---     disable_background = true,
--- })
---
--- vim.cmd("colorscheme rose-pine")
+
+-- Rose Pine
+require("rose-pine").setup({
+    disable_background = true,
+})
+
+vim.cmd("colorscheme rose-pine")
 
 -- Cyber Dream
 -- vim.cmd("colorscheme cyberdream")
@@ -22,4 +23,4 @@
 -- vim.cmd([[colorscheme tokyodark]])
 
 -- Catppuccin
-vim.cmd.colorscheme "catppuccin-mocha"
+-- vim.cmd.colorscheme "catppuccin-mocha"

@@ -3,25 +3,27 @@ require("lazy").setup({
 	"hrsh7th/nvim-cmp",
 
 	"ellisonleao/gruvbox.nvim",
-    "folke/tokyonight.nvim",
-    "rose-pine/neovim",
-    "scottmckendry/cyberdream.nvim",
-    "tiagovla/tokyodark.nvim",
-    "catppuccin/nvim",
+	"folke/tokyonight.nvim",
+	"rose-pine/neovim",
+	"scottmckendry/cyberdream.nvim",
+	"tiagovla/tokyodark.nvim",
+	"catppuccin/nvim",
 
 	"nvim-lualine/lualine.nvim",
 
 	"nvim-treesitter/nvim-treesitter",
 
-	"nvim-tree/nvim-tree.lua",
-	"nvim-tree/nvim-web-devicons",
+	{
+		"stevearc/oil.nvim",
+		dependencies = { "echasnovski/mini.icons" },
+	},
 
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 
 	"neovim/nvim-lspconfig",
 
-    "MysticalDevil/inlay-hints.nvim",
+	"MysticalDevil/inlay-hints.nvim",
 
 	{
 		"nvim-telescope/telescope.nvim",
@@ -49,17 +51,14 @@ require("lazy").setup({
 	{
 		"NeogitOrg/neogit",
 		dependencies = {
-			"nvim-lua/plenary.nvim", -- required
-			"sindrets/diffview.nvim", -- optional - Diff integration
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
 
-			-- Only one of these is needed.
-			"nvim-telescope/telescope.nvim", -- optional
-			"ibhagwan/fzf-lua", -- optional
-			"echasnovski/mini.pick", -- optional
+			"nvim-telescope/telescope.nvim",
+			"ibhagwan/fzf-lua",
+			"echasnovski/mini.pick",
 		},
 	},
 
-	"jiangmiao/auto-pairs",
-
-    "OmniSharp/omnisharp-vim",
+	"OmniSharp/omnisharp-vim",
 })

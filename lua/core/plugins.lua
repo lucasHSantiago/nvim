@@ -8,6 +8,7 @@ require("lazy").setup({
 	"scottmckendry/cyberdream.nvim",
 	"tiagovla/tokyodark.nvim",
 	"catppuccin/nvim",
+    "olimorris/onedarkpro.nvim",
     "nvim-tree/nvim-web-devicons",
 
 	"nvim-lualine/lualine.nvim",

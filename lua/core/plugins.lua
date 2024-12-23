@@ -25,8 +25,6 @@ require("lazy").setup({
 
 	"neovim/nvim-lspconfig",
 
-	"MysticalDevil/inlay-hints.nvim",
-
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.4",

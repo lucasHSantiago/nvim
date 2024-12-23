@@ -31,3 +31,9 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
+
+vim.opt.cursorline = false
+vim.opt.showmode = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+

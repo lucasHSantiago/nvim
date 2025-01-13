@@ -7,7 +7,7 @@ lspconfig_defaults.capabilities =
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "clangd", "omnisharp", "gopls", "dockerls", "yamlls" },
+	ensure_installed = { "lua_ls", "clangd", "omnisharp", "gopls", "dockerls", "yamlls", "rust_analyzer" },
 })
 
 local lspconfig = require("lspconfig")
@@ -29,6 +29,8 @@ lspconfig.yamlls.setup({})
 lspconfig.dockerls.setup({})
 
 lspconfig.omnisharp.setup({})
+
+lspconfig.rust_analyzer.setup({})
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

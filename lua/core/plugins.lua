@@ -8,8 +8,8 @@ require("lazy").setup({
 	"scottmckendry/cyberdream.nvim",
 	"tiagovla/tokyodark.nvim",
 	"catppuccin/nvim",
-    "olimorris/onedarkpro.nvim",
-    "nvim-tree/nvim-web-devicons",
+	"olimorris/onedarkpro.nvim",
+	"nvim-tree/nvim-web-devicons",
 
 	"nvim-lualine/lualine.nvim",
 
@@ -31,7 +31,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	"nvim-telescope/telescope-ui-select.nvim",
-    "folke/trouble.nvim",
+	"folke/trouble.nvim",
 
 	"nvimtools/none-ls.nvim",
 
@@ -62,4 +62,10 @@ require("lazy").setup({
 	},
 
 	"OmniSharp/omnisharp-vim",
+
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
 })

@@ -11,7 +11,11 @@
 
 -- Rose Pine
 require("rose-pine").setup({
-    -- disable_background = true,
+	-- disable_background = true,
+	highlight_groups = {
+		Normal = { bg = "#000000" },
+		NormalNC = { bg = "#000000" },
+	},
 })
 
 vim.cmd("colorscheme rose-pine")
@@ -20,7 +24,7 @@ vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme cyberdream")
 
 -- Tokyo Dark
--- require("tokyodark").setup({}) 
+-- require("tokyodark").setup({})
 -- vim.cmd([[colorscheme tokyodark]])
 
 -- Catppuccin

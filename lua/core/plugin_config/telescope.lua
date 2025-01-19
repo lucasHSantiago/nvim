@@ -1,16 +1,16 @@
 local open_with_trouble = require("trouble.sources.telescope").open
 
 require("telescope").setup({
-	file_ignore_patterns = {
-		"node%_modules/.*",
-        "%.git",
-	},
 	pickers = {
 		find_files = {
 			hidden = true,
 		},
 	},
 	defaults = {
+        file_ignore_patterns = {
+            "node_modules",
+            ".git",
+        },
 		mappings = {
 			i = { ["<c-t>"] = open_with_trouble },
 			n = { ["<c-t>"] = open_with_trouble },

@@ -30,6 +30,8 @@ require("lazy").setup({
 		tag = "0.1.4",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+    "windwp/nvim-ts-autotag",
+
 	"nvim-telescope/telescope-ui-select.nvim",
 	"folke/trouble.nvim",
 

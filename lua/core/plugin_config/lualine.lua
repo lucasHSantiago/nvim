@@ -14,5 +14,8 @@ require("lualine").setup({
 				path = 4,
 			},
 		},
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {},
 	},
 })

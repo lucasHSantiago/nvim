@@ -8,7 +8,7 @@ cmp.setup({
 		["<C-p>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
 		["<C-n>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 
-		["<CR>"] = cmp.mapping.confirm({ select = false }),
+		["<CR-y>"] = cmp.mapping.confirm({ select = true }),
 
         ["<C-d>"] = cmp.mapping.complete(),
 	}),

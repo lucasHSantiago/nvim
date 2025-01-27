@@ -1,6 +1,12 @@
 return {
     "folke/trouble.nvim",
-    config = function()
-        vim.keymap.set("n", "<Space>fd", ":Trouble diagnostics<CR>")
-    end
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+    keys = {
+        {
+            "<leader>fd",
+            "<cmd>Trouble diagnostics toggle<cr>",
+            desc = "Diagnostics (Trouble)",
+        },
+    }
 }

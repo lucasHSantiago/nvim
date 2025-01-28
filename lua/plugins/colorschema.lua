@@ -12,10 +12,30 @@ return {
     --         vim.cmd("colorscheme rose-pine-moon")
     --     end
     -- },
+    -- {
+    --     "folke/tokyonight.nvim",
+    --     config = function()
+    --         vim.cmd[[colorscheme tokyonight]]
+    --     end
+    -- }
+    -- {
+    --     "ellisonleao/gruvbox.nvim",
+    --     priority = 1000,
+    --     config = function()
+    --         require("gruvbox").setup({
+    --             contrast = "hard",
+    --         })
+    --
+    --         vim.cmd("colorscheme gruvbox")
+    --     end
+    -- },
     {
-        "folke/tokyonight.nvim",
+        "loctvl842/monokai-pro.nvim",
         config = function()
-            vim.cmd[[colorscheme tokyonight]]
+            require("monokai-pro").setup({
+                filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
+            })
+            vim.cmd([[colorscheme monokai-pro]])
         end
     }
 }

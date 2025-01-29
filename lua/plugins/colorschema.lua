@@ -33,7 +33,7 @@ return {
         "loctvl842/monokai-pro.nvim",
         config = function()
             require("monokai-pro").setup({
-                filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
+                filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
             })
             vim.cmd([[colorscheme monokai-pro]])
         end

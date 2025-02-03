@@ -46,9 +46,9 @@ return {
 
         lspconfig.cssls.setup({})
 
-        -- lspconfig.elixirls.setup({})
+        lspconfig.elixirls.setup({})
 
-        lspconfig.lexical.setup({})
+        -- lspconfig.lexical.setup({})
 
         vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
@@ -56,5 +56,6 @@ return {
         vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename, {})
         vim.keymap.set("n", "<leader>ro", vim.lsp.buf.hover, {})
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+        vim.keymap.set("n", "<C-s>", vim.lsp.buf.signature_help, {})
     end
 }

@@ -12,7 +12,7 @@ return {
         local neogit = require('neogit')
         neogit.setup {}
 
-        vim.keymap.set("n", "<leader>gs", ":Neogit kind=floating<CR>")
+        vim.keymap.set("n", "<leader>gs", ":Neogit kind=tab<CR>")
 
         local colors = {
             add_bg = "#04260f",

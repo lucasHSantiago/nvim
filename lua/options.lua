@@ -1,9 +1,6 @@
--- vim.opt.guicursor = "a:block"
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -36,4 +33,6 @@ vim.opt.cursorline = false
 vim.opt.showmode = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 

@@ -40,7 +40,7 @@ local function setup_lsp()
 
     lspconfig.elixirls.setup({})
 
-    -- lspconfig.lexical.setup({})
+    lspconfig.tailwindcss.setup({})
 end
 
 local function setup_diagnostics()

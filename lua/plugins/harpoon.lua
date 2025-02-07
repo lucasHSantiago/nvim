@@ -20,8 +20,5 @@ return {
         vim.keymap.set("n", "<leader>rj", function() harpoon:list():replace_at(2) end)
         vim.keymap.set("n", "<leader>rk", function() harpoon:list():replace_at(3) end)
         vim.keymap.set("n", "<leader>rl", function() harpoon:list():replace_at(4) end)
-
-        vim.keymap.set("n", "<Tab>", function() harpoon:list():prev() end)
-        vim.keymap.set("n", "<S-Tab>", function() harpoon:list():next() end)
     end
 }

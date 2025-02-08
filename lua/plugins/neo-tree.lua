@@ -24,6 +24,6 @@ return {
             },
         })
 
-        vim.keymap.set("n", "-", ":Neotree position=current<CR>")
+        vim.keymap.set("n", "-", ":Neotree position=current reveal<CR>")
     end
 }

@@ -36,11 +36,25 @@ local function setup_lsp()
 
     lspconfig.html.setup({})
 
-    lspconfig.cssls.setup({})
+    lspconfig.cssls.setup({
+        filetypes = {
+            "html", "css", "javascriptreact", "typescriptreact", "heex"
+        },
+    })
 
     lspconfig.elixirls.setup({})
 
-    lspconfig.tailwindcss.setup({})
+    lspconfig.tailwindcss.setup({
+        filetypes = {
+            "html", "css", "javascriptreact", "typescriptreact", "heex"
+        },
+    })
+
+    lspconfig.emmet_ls.setup({
+        filetypes = {
+            "html", "css", "javascriptreact", "typescriptreact", "heex"
+        },
+    })
 end
 
 local function setup_diagnostics()

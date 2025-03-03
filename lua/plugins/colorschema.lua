@@ -2,7 +2,9 @@ return {
 	{
 		"morhetz/gruvbox",
 		config = function()
-			-- vim.cmd [[colorscheme gruvbox]]
+			vim.g.gruvbox_contrast_dark = "hard"
+
+			-- vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
@@ -18,7 +20,51 @@ return {
 				},
 			})
 
-			vim.cmd("colorscheme rose-pine-moon")
+			-- vim.cmd("colorscheme rose-pine-moon")
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			require("kanagawa").setup({
+				compile = false,
+				undercurl = true,
+				commentStyle = { italic = false },
+				functionStyle = {},
+				keywordStyle = { italic = false },
+				statementStyle = { bold = false },
+				typeStyle = {},
+				transparent = false,
+				dimInactive = false,
+				terminalColors = true,
+				colors = {
+					palette = {},
+					theme = {
+						wave = {},
+						lotus = {},
+						dragon = {
+							ui = {
+								bg = "#0b0600",
+							},
+						},
+						all = {
+							ui = {
+								bg_gutter = "none",
+							},
+						},
+					},
+				},
+				overrides = function(colors)
+					return {}
+				end,
+				theme = "dragon",
+				background = {
+					dark = "dragon",
+					light = "lotus",
+				},
+			})
+
+			vim.cmd("colorscheme kanagawa")
 		end,
 	},
 }

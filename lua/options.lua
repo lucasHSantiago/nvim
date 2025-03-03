@@ -4,13 +4,11 @@ vim.g.maplocalleader = " "
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.backspace = "2"
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
 vim.opt.autowrite = true
-vim.opt.cursorline = true
-vim.opt.guicursor = "n-v-c:block"
 vim.opt.autoread = true
+vim.opt.guicursor = "n-v-c:block"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

@@ -24,6 +24,9 @@ return {
                     Normal = { bg = "#000000" },
                     NormalNC = { bg = "#000000" },
                 },
+                styles = {
+                    italic = false,
+                },
             })
 
             vim.cmd("colorscheme rose-pine-moon")

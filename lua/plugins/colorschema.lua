@@ -24,6 +24,17 @@ return {
 		end,
 	},
 	{
+		"folke/tokyonight.nvim",
+		config = function()
+			require("tokyonight").setup({
+				transparent = true,
+				styles = {
+					functions = {},
+				},
+			})
+		end,
+	},
+	{
 		"rebelot/kanagawa.nvim",
 		config = function()
 			require("kanagawa").setup({

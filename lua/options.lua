@@ -17,6 +17,7 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
+vim.opt.incsearch = true
 
 vim.cmd([[ set noswapfile ]])
 vim.cmd([[ set termguicolors ]])
@@ -34,3 +35,9 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
+	end,
+})

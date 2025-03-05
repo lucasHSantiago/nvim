@@ -35,6 +35,12 @@ return {
 		end,
 	},
 	{
+		"tjdevries/gruvbuddy.nvim",
+		dependencies = {
+			"tjdevries/colorbuddy.nvim",
+		},
+	},
+	{
 		"rebelot/kanagawa.nvim",
 		config = function()
 			require("kanagawa").setup({
@@ -51,7 +57,11 @@ return {
 				colors = {
 					palette = {},
 					theme = {
-						wave = {},
+						wave = {
+							ui = {
+								bg = "#111111",
+							},
+						},
 						lotus = {},
 						dragon = {
 							ui = {
@@ -68,9 +78,9 @@ return {
 				overrides = function(colors)
 					return {}
 				end,
-				theme = "dragon",
+				theme = "wave",
 				background = {
-					dark = "dragon",
+					dark = "wave",
 					light = "lotus",
 				},
 			})

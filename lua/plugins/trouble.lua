@@ -1,12 +1,22 @@
 return {
-    "folke/trouble.nvim",
-    opts = {}, -- for default options, refer to the configuration section for custom setup.
-    cmd = "Trouble",
-    keys = {
-        {
-            "<leader>fd",
-            "<cmd>Trouble diagnostics toggle<cr>",
-            desc = "Diagnostics (Trouble)",
-        },
-    }
+	"folke/trouble.nvim",
+	opts = {},
+	cmd = "Trouble",
+	keys = {
+		{
+			"<leader>tt",
+			"<cmd>Trouble diagnostics toggle<cr>",
+			desc = "Diagnostics (Trouble)",
+		},
+		{
+			"[t",
+			"<cmd>Trouble diagnostics next jump=true skip_groups=true<cr>",
+			desc = "go to the next item",
+		},
+		{
+			"]t",
+			"<cmd>Trouble diagnostics prev jump=true skip_groups=true<cr>",
+			desc = "go to the previous item",
+		},
+	},
 }

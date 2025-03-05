@@ -22,3 +22,9 @@ vim.keymap.set("v", "<leader>d", '"_d')
 
 vim.keymap.set("n", "<leader>x", '"_x')
 vim.keymap.set("v", "<leader>x", '"_x')
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")

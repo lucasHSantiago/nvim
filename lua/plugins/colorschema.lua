@@ -1,13 +1,5 @@
 return {
 	{
-		"morhetz/gruvbox",
-		config = function()
-			vim.g.gruvbox_contrast_dark = "hard"
-
-			-- vim.cmd("colorscheme gruvbox")
-		end,
-	},
-	{
 		"rose-pine/neovim",
 		config = function()
 			require("rose-pine").setup({
@@ -24,21 +16,33 @@ return {
 		end,
 	},
 	{
-		"folke/tokyonight.nvim",
+		"rktjmp/lush.nvim",
+		{ dir = "/home/lucas/projects/rosetta", lazy = true },
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
 		config = function()
-			require("tokyonight").setup({
-				transparent = true,
-				styles = {
-					functions = {},
+			require("gruvbox").setup({
+				bold = false,
+				italic = {
+					strings = false,
+					emphasis = false,
+					comments = false,
+					operators = false,
+					folds = false,
 				},
+				overrides = {
+					SignColumn = { bg = "NONE" },
+					LineNr = { bg = "NONE" },
+				},
+				contrast = "hard",
 			})
+
+			-- vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
-		"tjdevries/gruvbuddy.nvim",
-		dependencies = {
-			"tjdevries/colorbuddy.nvim",
-		},
+		"catppuccin/nvim",
 	},
 	{
 		"rebelot/kanagawa.nvim",
@@ -85,7 +89,15 @@ return {
 				},
 			})
 
-			vim.cmd("colorscheme kanagawa")
+			-- vim.cmd("colorscheme kanagawa")
+		end,
+	},
+	{
+
+		"vague2k/vague.nvim",
+		config = function()
+			require("vague").setup({})
+			vim.cmd("colorscheme vague")
 		end,
 	},
 }

@@ -1,18 +1,17 @@
 return {
 	{
 		"rose-pine/neovim",
+		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
-				highlight_groups = {
-					Normal = { bg = "#000000" },
-					NormalNC = { bg = "#000000" },
-				},
+				variant = "moon",
 				styles = {
 					italic = false,
+					transparency = true,
 				},
 			})
 
-			-- vim.cmd("colorscheme rose-pine-moon")
+			vim.cmd("colorscheme rose-pine")
 		end,
 	},
 	{
@@ -35,14 +34,39 @@ return {
 					SignColumn = { bg = "NONE" },
 					LineNr = { bg = "NONE" },
 				},
-				contrast = "hard",
+				contrast = "",
 			})
-
-			-- vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
-		"catppuccin/nvim",
+		"folke/tokyonight.nvim",
+		config = function()
+			require("tokyonight").setup({
+				style = "storm",
+				transparent = true,
+				terminal_colors = true,
+				styles = {
+					comments = { italic = false },
+					keywords = { italic = false },
+					sidebars = "dark",
+					floats = "dark",
+				},
+			})
+		end,
+	},
+	{
+		"tiagovla/tokyodark.nvim",
+		config = function()
+			require("tokyodark").setup({
+				styles = {
+					comments = { italic = false },
+					keywords = { italic = false },
+					identifiers = { italic = false },
+					functions = {},
+					variables = {},
+				},
+			})
+		end,
 	},
 	{
 		"rebelot/kanagawa.nvim",
@@ -88,16 +112,35 @@ return {
 					light = "lotus",
 				},
 			})
-
-			-- vim.cmd("colorscheme kanagawa")
 		end,
 	},
 	{
 
 		"vague2k/vague.nvim",
 		config = function()
-			require("vague").setup({})
-			vim.cmd("colorscheme vague")
+			require("vague").setup({
+				transparent = false,
+				style = {
+					comments = "none",
+					strings = "none",
+					keyword_return = "none",
+				},
+				plugins = {
+					lsp = {
+						diagnostic_info = "none",
+					},
+				},
+			})
 		end,
+	},
+	{
+		"catppuccin/nvim",
+		"zenbones-theme/zenbones.nvim",
+		"dasupradyumna/midnight.nvim",
+		"tjdevries/colorbuddy.nvim",
+		"bluz71/vim-moonfly-colors",
+		"craftzdog/solarized-osaka.nvim",
+		"miikanissi/modus-themes.nvim",
+		"cryptomilk/nightcity.nvim",
 	},
 }

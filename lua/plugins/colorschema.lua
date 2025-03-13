@@ -1,24 +1,5 @@
 return {
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		config = function()
-			require("rose-pine").setup({
-				variant = "moon",
-				styles = {
-					italic = false,
-					transparency = true,
-				},
-			})
-
-			vim.cmd("colorscheme rose-pine")
-		end,
-	},
-	{
-		"rktjmp/lush.nvim",
-		{ dir = "/home/lucas/projects/rosetta", lazy = true },
-	},
-	{
 		"ellisonleao/gruvbox.nvim",
 		config = function()
 			require("gruvbox").setup({
@@ -34,7 +15,22 @@ return {
 					SignColumn = { bg = "NONE" },
 					LineNr = { bg = "NONE" },
 				},
-				contrast = "",
+				contrast = "hard",
+			})
+
+			vim.cmd("colorscheme gruvbox")
+		end,
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			require("rose-pine").setup({
+				variant = "moon",
+				styles = {
+					italic = false,
+					transparency = true,
+				},
 			})
 		end,
 	},
@@ -43,7 +39,6 @@ return {
 		config = function()
 			require("tokyonight").setup({
 				style = "storm",
-				transparent = true,
 				terminal_colors = true,
 				styles = {
 					comments = { italic = false },
@@ -69,52 +64,6 @@ return {
 		end,
 	},
 	{
-		"rebelot/kanagawa.nvim",
-		config = function()
-			require("kanagawa").setup({
-				compile = false,
-				undercurl = true,
-				commentStyle = { italic = false },
-				functionStyle = {},
-				keywordStyle = { italic = false },
-				statementStyle = { bold = false },
-				typeStyle = {},
-				transparent = false,
-				dimInactive = false,
-				terminalColors = true,
-				colors = {
-					palette = {},
-					theme = {
-						wave = {
-							ui = {
-								bg = "#111111",
-							},
-						},
-						lotus = {},
-						dragon = {
-							ui = {
-								bg = "#0b0600",
-							},
-						},
-						all = {
-							ui = {
-								bg_gutter = "none",
-							},
-						},
-					},
-				},
-				overrides = function(colors)
-					return {}
-				end,
-				theme = "wave",
-				background = {
-					dark = "wave",
-					light = "lotus",
-				},
-			})
-		end,
-	},
-	{
 
 		"vague2k/vague.nvim",
 		config = function()
@@ -135,12 +84,11 @@ return {
 	},
 	{
 		"catppuccin/nvim",
-		"zenbones-theme/zenbones.nvim",
-		"dasupradyumna/midnight.nvim",
-		"tjdevries/colorbuddy.nvim",
-		"bluz71/vim-moonfly-colors",
-		"craftzdog/solarized-osaka.nvim",
-		"miikanissi/modus-themes.nvim",
-		"cryptomilk/nightcity.nvim",
+		config = function()
+			require("catppuccin").setup({
+				flavour = "mocha",
+				no_italic = true,
+			})
+		end,
 	},
 }

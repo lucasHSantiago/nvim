@@ -34,6 +34,8 @@ vim.opt.showmode = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.undofile = true
+
 if vim.fn.has("win32") ~= 1 then
 	vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end

@@ -60,6 +60,8 @@ return {
 					enable = false,
 				},
 			})
+
+			vim.keymap.set("n", "<leader>gb", ":Gitsigns blame<CR>")
 		end,
 	},
 }

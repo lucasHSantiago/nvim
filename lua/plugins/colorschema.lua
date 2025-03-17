@@ -17,8 +17,6 @@ return {
 				},
 				contrast = "hard",
 			})
-
-			vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
@@ -89,6 +87,8 @@ return {
 				flavour = "mocha",
 				no_italic = true,
 			})
+
+			vim.cmd("colorscheme catppuccin")
 		end,
 	},
 }

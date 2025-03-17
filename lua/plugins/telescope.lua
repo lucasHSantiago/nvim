@@ -16,7 +16,7 @@ return {
 			defaults = {
 				file_ignore_patterns = {
 					"node_modules",
-					".git",
+					"^.git/",
 				},
 				mappings = {
 					i = { ["<c-t>"] = open_with_trouble },

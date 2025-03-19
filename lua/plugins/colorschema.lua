@@ -38,6 +38,7 @@ return {
 			require("tokyonight").setup({
 				style = "storm",
 				terminal_colors = true,
+				transparent = true,
 				styles = {
 					comments = { italic = false },
 					keywords = { italic = false },
@@ -81,14 +82,29 @@ return {
 		end,
 	},
 	{
+		"navarasu/onedark.nvim",
+		config = function()
+			require("onedark").setup({
+				style = "darker",
+			})
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		config = function()
 			require("catppuccin").setup({
 				flavour = "mocha",
 				no_italic = true,
 			})
-
-			vim.cmd("colorscheme catppuccin")
+		end,
+	},
+	{
+		"projekt0n/github-nvim-theme",
+	},
+	{
+		"Mofiqul/vscode.nvim",
+		config = function()
+			vim.cmd("colorscheme vscode")
 		end,
 	},
 }

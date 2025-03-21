@@ -25,11 +25,16 @@ return {
 		config = function()
 			require("rose-pine").setup({
 				variant = "moon",
+				disable_background = true,
 				styles = {
 					italic = false,
-					transparency = true,
 				},
 			})
+
+			vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+			vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+			vim.cmd("colorscheme rose-pine")
 		end,
 	},
 	{
@@ -103,8 +108,11 @@ return {
 	},
 	{
 		"Mofiqul/vscode.nvim",
-		config = function()
-			vim.cmd("colorscheme vscode")
-		end,
+	},
+	{
+		"nordtheme/vim",
+	},
+	{
+		"aktersnurra/no-clown-fiesta.nvim",
 	},
 }

@@ -59,11 +59,7 @@ return {
 					--  Symbols are things like variables, functions, types, etc.
 					map("<leader>fs", require("telescope.builtin").lsp_document_symbols, "[F]ind [S]ymbols")
 
-					map(
-						"<leader>ws",
-						require("telescope.builtin").lsp_dynamic_workspace_symbols,
-						"[W]orkspace [S]ymbols"
-					)
+					map("<leader>as", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[A]ll [S]ymbols")
 
 					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 

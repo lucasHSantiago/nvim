@@ -47,20 +47,6 @@ return {
 
 					map("<leader>vd", vim.diagnostic.open_float, "signature help")
 
-					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-
-					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-
-					map("<leader>gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-
-					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-
-					-- Fuzzy find all the symbols in your current document.
-					--  Symbols are things like variables, functions, types, etc.
-					map("<leader>fs", require("telescope.builtin").lsp_document_symbols, "[F]ind [S]ymbols")
-
-					map("<leader>as", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[A]ll [S]ymbols")
-
 					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 
 					map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })

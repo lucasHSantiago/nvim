@@ -97,6 +97,13 @@ return {
 					end,
 					desc = "Buffer Diagnostics",
 				},
+				{
+					"<leader>fS",
+					function()
+						Snacks.picker.spelling()
+					end,
+					desc = "Buffer Diagnostics",
+				},
 				-- LSP
 				{
 					"gd",

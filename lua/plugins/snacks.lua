@@ -14,15 +14,17 @@ return {
 				picker = {
 					enabled = true,
 					layout = {
-						cycle = true,
 						preset = function()
-							return vim.o.columns >= 120 and "default" or "vertical"
+							return vim.o.columns >= 120 and "sidebar" or "vertical"
 						end,
 					},
 					matcher = {
 						frecency = true,
 					},
 					formatters = {
+						file = {
+							filename_first = true,
+						},
 						severity = {
 							icons = false,
 						},
@@ -30,9 +32,9 @@ return {
 					icons = {
 						files = {
 							enabled = false,
-							git = {
-								enabled = false,
-							},
+						},
+						git = {
+							enabled = false,
 						},
 					},
 				},
@@ -77,11 +79,23 @@ return {
 				{
 					"<leader>fc",
 					function()
-						Snacks.picker.colorschemes({
-							layout = "vscode",
-						})
+						Snacks.picker.colorschemes()
 					end,
 					desc = "Colorschemes",
+				},
+				{
+					"<leader>fd",
+					function()
+						Snacks.picker.diagnostics()
+					end,
+					desc = "Diagnostics",
+				},
+				{
+					"<leader>fD",
+					function()
+						Snacks.picker.diagnostics_buffer()
+					end,
+					desc = "Buffer Diagnostics",
 				},
 				-- LSP
 				{

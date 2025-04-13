@@ -100,6 +100,7 @@ return {
 			-- Enable the following language servers
 			local servers = {
 				gopls = {},
+				buf_ls = {},
 				-- pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs

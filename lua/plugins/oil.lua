@@ -18,6 +18,8 @@ return {
 				["<C-t>"] = false,
 				["<C-p>"] = false,
 				["<C-l>"] = false,
+				["<C-c>"] = false,
+				["<Esc>"] = { "actions.close", mode = "n" },
 			},
 		})
 

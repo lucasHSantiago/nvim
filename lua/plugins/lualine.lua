@@ -10,7 +10,7 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = {},
+				lualine_b = { "diagnostics" },
 				lualine_c = {
 					{
 						"filename",
@@ -18,8 +18,8 @@ return {
 					},
 				},
 				lualine_x = {},
-				lualine_y = { "branch", "diagnostics" },
-				lualine_z = {},
+				lualine_y = {},
+				lualine_z = { "branch" },
 			},
 		})
 	end,

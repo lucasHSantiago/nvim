@@ -15,9 +15,7 @@ return {
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			-- Automatically install LSPs and related tools to stdpath for Neovim
 			-- Mason must be loaded before its dependents so we need to set it up here.
-			-- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
 			{ "williamboman/mason.nvim", opts = {} },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -45,7 +43,7 @@ return {
 
 					map("<C-s>", vim.lsp.buf.signature_help, "signature help")
 
-					map("<leader>vd", vim.diagnostic.open_float, "signature help")
+					map("<leader>vd", vim.diagnostic.open_float, "open float diagnostic window")
 
 					map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 
@@ -99,26 +97,20 @@ return {
 
 			-- Enable the following language servers
 			local servers = {
-				gopls = {},
+				gopls = {
+					settings = {
+						gopls = {
+							gofumpt = true,
+						},
+					},
+				},
 				buf_ls = {},
-				-- pyright = {},
-				-- rust_analyzer = {},
-				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-				--
-				-- Some languages (like typescript) have entire language plugins that can be useful:
-				--    https://github.com/pmizio/typescript-tools.nvim
-				--
-				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				-- ts_ls = {},
-				--
-
 				lua_ls = {
 					settings = {
 						Lua = {
 							completion = {
 								callSnippet = "Replace",
 							},
-							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
 							diagnostics = { disable = { "missing-fields" } },
 						},
 					},
@@ -145,6 +137,25 @@ return {
 					end,
 				},
 			})
+
+			-- auto import configuration for golang files
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				pattern = "*.go",
+				callback = function()
+					local params = vim.lsp.util.make_range_params()
+					params.context = { only = { "source.organizeImports" } }
+
+					vim.lsp.buf.code_action({
+						context = params.context,
+						filter = function(action)
+							return action.kind == "source.organizeImports"
+						end,
+						apply = true,
+					})
+
+					vim.lsp.buf.format({ async = false })
+				end,
+			})
 		end,
 	},
 	{ -- Autoformat
@@ -164,9 +175,6 @@ return {
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style.
-				-- languages here or re-enable it for the disabled ones.
 				local disable_filetypes = { c = true, cpp = true }
 				local lsp_format_opt
 				if disable_filetypes[vim.bo[bufnr].filetype] then
@@ -181,11 +189,6 @@ return {
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
-				--
-				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "prettierd", "prettier", stop_after_first = true },
 			},
 		},
 	},
@@ -207,13 +210,11 @@ return {
 					return "make install_jsregexp"
 				end)(),
 				dependencies = {
-					-- `friendly-snippets` contains a variety of premade snippets.
-					--    See the README about individual language/framework/plugin snippets:
-					--    https://github.com/rafamadriz/friendly-snippets
 					{
 						"rafamadriz/friendly-snippets",
 						config = function()
 							require("luasnip.loaders.from_vscode").lazy_load()
+							-- load custom snippets
 							require("luasnip.loaders.from_vscode").load({ paths = "./snippets" })
 						end,
 					},
@@ -243,12 +244,9 @@ return {
 				completion = { completeopt = "menu,menuone,noinsert" },
 
 				mapping = cmp.mapping.preset.insert({
-					-- Select the [n]ext item
 					["<C-n>"] = cmp.mapping.select_next_item(),
-					-- Select the [p]revious item
 					["<C-p>"] = cmp.mapping.select_prev_item(),
 
-					-- Scroll the documentation window [b]ack / [f]orward
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 
@@ -256,19 +254,12 @@ return {
 
 					["<C-Space>"] = cmp.mapping.complete({}),
 
-					-- Think of <c-l> as moving to the right of your snippet expansion.
-					--  So if you have a snippet that's like:
-					--  function $name($args)
-					--    $body
-					--  end
-					--
-					-- <c-l> will move you to the right of each of the expansion locations.
-					-- <c-h> is similar, except moving you backwards.
 					["<C-l>"] = cmp.mapping(function()
 						if luasnip.expand_or_locally_jumpable() then
 							luasnip.expand_or_jump()
 						end
 					end, { "i", "s" }),
+
 					["<C-h>"] = cmp.mapping(function()
 						if luasnip.locally_jumpable(-1) then
 							luasnip.jump(-1)

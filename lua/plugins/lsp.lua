@@ -138,10 +138,13 @@ return {
 				},
 			})
 
-			-- auto import configuration for golang files
+			-- configuration for auto import in golang files
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				pattern = "*.go",
 				callback = function()
+					-- go autoformat is here
+					vim.lsp.buf.format({ async = false })
+
 					local params = vim.lsp.util.make_range_params()
 					params.context = { only = { "source.organizeImports" } }
 
@@ -152,8 +155,6 @@ return {
 						end,
 						apply = true,
 					})
-
-					vim.lsp.buf.format({ async = false })
 				end,
 			})
 		end,
@@ -175,7 +176,8 @@ return {
 		opts = {
 			notify_on_error = false,
 			format_on_save = function(bufnr)
-				local disable_filetypes = { c = true, cpp = true }
+				-- go is disable beacause is doing this in other location
+				local disable_filetypes = { c = true, cpp = true, go = true }
 				local lsp_format_opt
 				if disable_filetypes[vim.bo[bufnr].filetype] then
 					lsp_format_opt = "never"

@@ -104,7 +104,6 @@ return {
 						},
 					},
 				},
-				buf_ls = {},
 				lua_ls = {
 					settings = {
 						Lua = {

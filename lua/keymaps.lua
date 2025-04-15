@@ -27,3 +27,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>j", ":cnext<CR>")
 vim.keymap.set("n", "<leader>k", ":cprev<CR>")
+
+vim.keymap.set("n", "<leader>ff", function()
+	require("myplugins.dir_picker").pick_directory()
+end, { desc = "Pick dir with snacks", noremap = true, silent = true })

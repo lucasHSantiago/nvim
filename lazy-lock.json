@@ -27,7 +27,6 @@
   "neogit": { "branch": "master", "commit": "81bbefa40a49c1c00a8c31292889b1e078321ecc" },
   "neotest": { "branch": "master", "commit": "dddbe8fe358b05b2b7e54fe4faab50563171a76d" },
   "neotest-golang": { "branch": "main", "commit": "131e0402e63966692d340861c58756853913ada3" },
-  "nightfly": { "branch": "master", "commit": "20ce962726d0991826f243a589a53f6d49b94651" },
   "nvim": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "nvim-autopairs": { "branch": "master", "commit": "2a406cdd8c373ae7fe378a9e062a5424472bd8d8" },
   "nvim-cmp": { "branch": "main", "commit": "059e89495b3ec09395262f16b1ad441a38081d04" },

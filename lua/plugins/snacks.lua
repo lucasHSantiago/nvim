@@ -102,7 +102,7 @@ return {
 					function()
 						Snacks.picker.spelling()
 					end,
-					desc = "Buffer Diagnostics",
+					desc = "Spelling",
 				},
 				-- LSP
 				{

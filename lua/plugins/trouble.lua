@@ -9,12 +9,12 @@ return {
 			desc = "Diagnostics (Trouble)",
 		},
 		{
-			"[t",
+			"]t",
 			"<cmd>Trouble diagnostics next jump=true skip_groups=true<cr>",
 			desc = "go to the next item",
 		},
 		{
-			"]t",
+			"[t",
 			"<cmd>Trouble diagnostics prev jump=true skip_groups=true<cr>",
 			desc = "go to the previous item",
 		},

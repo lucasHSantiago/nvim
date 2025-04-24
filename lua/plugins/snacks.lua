@@ -43,9 +43,9 @@ return {
 				{
 					"<c-p>",
 					function()
-						Snacks.picker.smart()
+						Snacks.picker.files()
 					end,
-					desc = "Smart Find Files",
+					desc = "Find Files",
 				},
 				{
 					"<leader>fg",
@@ -128,7 +128,7 @@ return {
 					desc = "References",
 				},
 				{
-					"<leader>gi",
+					"gi",
 					function()
 						Snacks.picker.lsp_implementations()
 					end,

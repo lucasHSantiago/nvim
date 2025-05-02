@@ -1,5 +1,27 @@
 return {
 	{
+		"vague2k/vague.nvim",
+		config = function()
+			require("vague").setup({
+				style = {
+					comments = "none",
+					strings = "none",
+					keyword_return = "none",
+				},
+			})
+			vim.cmd([[colorscheme vague]])
+		end,
+	},
+	{
+		"bluz71/vim-nightfly-colors",
+		name = "nightfly",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.nightflyVirtualTextColor = true
+		end,
+	},
+	{
 		"folke/tokyonight.nvim",
 		config = function()
 			local bg = "#011628"
@@ -32,8 +54,6 @@ return {
 					colors.fg_sidebar = fg_dark
 				end,
 			})
-
-			vim.cmd([[ colorscheme tokyonight ]])
 		end,
 	},
 	{
@@ -90,9 +110,13 @@ return {
 		config = function()
 			require("rose-pine").setup({
 				variant = "moon",
-				disable_background = true,
+				disable_background = false,
 				styles = {
 					italic = false,
+				},
+				highlight_groups = {
+					Normal = { bg = "#000000" },
+					NormalNC = { bg = "#000000" },
 				},
 			})
 		end,

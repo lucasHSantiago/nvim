@@ -9,7 +9,6 @@ return {
 					keyword_return = "none",
 				},
 			})
-			vim.cmd([[colorscheme vague]])
 		end,
 	},
 	{
@@ -119,6 +118,7 @@ return {
 					NormalNC = { bg = "#000000" },
 				},
 			})
+			vim.cmd([[colorscheme rose-pine]])
 		end,
 	},
 	{

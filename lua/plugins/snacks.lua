@@ -15,7 +15,7 @@ return {
 					enabled = true,
 					layout = {
 						preset = function()
-							return vim.o.columns >= 120 and "sidebar" or "vertical"
+							return vim.o.columns >= 120 and "telescope" or "vertical"
 						end,
 					},
 					matcher = {

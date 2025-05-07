@@ -45,7 +45,7 @@ function M.pick_directory()
 		title = "Directory",
 		source = "Directories",
 		items = directories,
-		layout = { preset = vim.o.columns >= 120 and "default" or "vertical" },
+		layout = { preset = vim.o.columns >= 120 and "telescope" or "vertical" },
 		format = function(item, _)
 			return {
 				{ item.text },

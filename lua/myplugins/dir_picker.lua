@@ -18,7 +18,7 @@ function M.pick_directory()
 	local directories = {}
 
 	local output = vim.fn.systemlist({
-		"fdfind",
+		"fd",
 		"--type",
 		"d",
 		"--max-depth",

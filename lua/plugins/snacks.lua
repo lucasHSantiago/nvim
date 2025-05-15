@@ -24,6 +24,7 @@ return {
 					formatters = {
 						file = {
 							filename_first = true,
+							truncate = 100,
 						},
 						severity = {
 							icons = false,

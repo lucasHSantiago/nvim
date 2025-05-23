@@ -22,5 +22,7 @@ return {
 		vim.g.go_diagnostics_enabled = 0
 		vim.g.go_highlight_diagnostic_errors = 0
 		vim.g.go_highlight_diagnostic_warnings = 0
+
+		vim.keymap.set("n", "<leader>h", ":GoAlternate<CR>")
 	end,
 }

@@ -44,7 +44,10 @@ return {
 				{
 					"<c-p>",
 					function()
-						Snacks.picker.files()
+						Snacks.picker.files({
+							cmd = "fd",
+							exclude = { "vendor" },
+						})
 					end,
 					desc = "Find Files",
 				},

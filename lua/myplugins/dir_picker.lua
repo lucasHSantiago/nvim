@@ -25,6 +25,7 @@ function M.pick_directory()
 		"10",
 		"--strip-cwd-prefix",
 		".",
+		"-H",
 	})
 
 	for _, relative_path in ipairs(output) do

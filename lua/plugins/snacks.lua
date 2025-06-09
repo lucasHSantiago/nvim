@@ -46,7 +46,8 @@ return {
 					function()
 						Snacks.picker.files({
 							cmd = "fd",
-							exclude = { "vendor" },
+							hidden = true,
+							exclude = { "vendor", ".git" },
 						})
 					end,
 					desc = "Find Files",

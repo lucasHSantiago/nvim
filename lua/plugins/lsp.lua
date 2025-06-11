@@ -144,7 +144,7 @@ return {
 					-- go autoformat is here
 					vim.lsp.buf.format({ async = false })
 
-					local params = vim.lsp.util.make_range_params()
+					local params = vim.lsp.util.make_range_params(0, "utf-8")
 					params.context = { only = { "source.organizeImports" } }
 
 					vim.lsp.buf.code_action({
